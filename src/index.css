@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-navy-950 antialiased;
+  }
+
+  ::selection {
+    @apply bg-gold-400/30 text-navy-950;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #eef1f5;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c9a227;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ad7f20;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-l from-gold-400 to-gold-500 px-7 py-3.5 text-base font-bold text-navy-950 shadow-lg shadow-gold-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gold-500/40;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-7 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/30 transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-400 hover:shadow-xl hover:shadow-emerald-500/40;
+  }
+
+  .hero-bg {
+    background:
+      radial-gradient(1200px 620px at 85% -10%, rgba(201, 162, 39, 0.16), transparent 60%),
+      radial-gradient(900px 520px at 8% 110%, rgba(16, 185, 129, 0.14), transparent 60%),
+      linear-gradient(160deg, #0a172c 0%, #12243f 45%, #1c3257 100%);
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 7s ease-in-out infinite;
+}
+
+/* ===== شاشة الدخول (Intro) ===== */
+
+@keyframes introPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.intro-pop {
+  animation: introPop 0.85s cubic-bezier(0.22, 1.2, 0.36, 1) both;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro-rise {
+  animation: riseIn 0.7s ease-out 0.3s both;
+}
+
+.intro-rise-2 {
+  animation: riseIn 0.7s ease-out 0.5s both;
+}
+
+.intro-rise-3 {
+  animation: riseIn 0.7s ease-out 0.7s both;
+}
+
+.intro-rise-4 {
+  animation: riseIn 0.7s ease-out 0.9s both;
+}
+
+@keyframes introSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.intro-spin {
+  animation: introSpin 16s linear infinite;
+}
+
+@keyframes introProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.intro-progress {
+  transform-origin: right;
+  animation: introProgress 7400ms linear forwards;
+}
+
+/* حركات الرسم التوضيحي */
+
+@keyframes paperFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+.paper-float {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: paperFloat 4.5s ease-in-out infinite;
+}
+
+.paper-float-2 {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: paperFloat 5.4s ease-in-out 0.7s infinite;
+}
+
+@keyframes headWobble {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-1.8deg);
+  }
+  70% {
+    transform: rotate(1.8deg);
+  }
+}
+
+.head-wobble {
+  transform-box: fill-box;
+  transform-origin: 50% 85%;
+  animation: headWobble 3.4s ease-in-out infinite;
+}
+
+@keyframes qPulse {
+  0%,
+  100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+}
+
+.q-pulse {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: qPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+
+.dot-pulse {
+  animation: dotPulse 1.3s ease-in-out infinite;
+}
+
+.dot-pulse-2 {
+  animation: dotPulse 1.3s ease-in-out 0.2s infinite;
+}
+
+.dot-pulse-3 {
+  animation: dotPulse 1.3s ease-in-out 0.4s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-pop,
+  .intro-rise,
+  .intro-rise-2,
+  .intro-rise-3,
+  .intro-rise-4,
+  .intro-spin,
+  .intro-progress,
+  .paper-float,
+  .paper-float-2,
+  .head-wobble,
+  .q-pulse,
+  .dot-pulse,
+  .dot-pulse-2,
+  .dot-pulse-3 {
+    animation: none !important;
+  }
+}

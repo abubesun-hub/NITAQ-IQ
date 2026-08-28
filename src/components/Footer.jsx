@@ -12,7 +12,7 @@ const quickLinks = [
 const socials = [
   { label: 'واتساب', href: waLink('مرحباً، أرغب في التواصل معكم'), Icon: WhatsAppIcon },
   { label: 'فيسبوك', href: 'https://www.facebook.com/NitaqoS', Icon: Facebook },
-  { label: 'انستغرام', href: 'https://instagram.com', Icon: Instagram },
+  { label: 'انستغرام', href: 'https://www.instagram.com/nitaq.os/', Icon: Instagram },
 ];
 
 export default function Footer() {

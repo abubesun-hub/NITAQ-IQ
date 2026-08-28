@@ -11,7 +11,7 @@ const quickLinks = [
 
 const socials = [
   { label: 'واتساب', href: waLink('مرحباً، أرغب في التواصل معكم'), Icon: WhatsAppIcon },
-  { label: 'فيسبوك', href: 'https://facebook.com', Icon: Facebook },
+  { label: 'فيسبوك', href: 'https://www.facebook.com/NitaqoS', Icon: Facebook },
   { label: 'انستغرام', href: 'https://instagram.com', Icon: Instagram },
 ];
 
